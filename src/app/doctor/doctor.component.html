@@ -1,0 +1,45 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+  rel="stylesheet"
+/>
+
+<body class="body">
+  <header>
+    <div class="headimg">
+      <img style="height: 45px" src="../../assets/long.svg" alt="" />
+    </div>
+    <div></div>
+  </header>
+  <div class="parent">
+    <span class="login">Doctor's Login</span>
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+      <div class="formgroup">
+        <input
+          type="text"
+          id="drid"
+          placeholder="Enter your hospital Doctor ID"
+          formControlName="docid"
+        />
+        <small
+          class="text-red-600 pt-1"
+          *ngIf="vname && vname.invalid && vname.touched"
+          >ID is Required</small
+        >
+        <input
+          type="password"
+          id="pw"
+          placeholder="Enter Your Password"
+          formControlName="docpw"
+        />
+        <small
+          class="text-red-600 pt-1"
+          *ngIf="vpw && vpw.invalid && vpw.touched"
+          >Check Your Password</small
+        >
+        <button [disabled]="loginform.invalid" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>

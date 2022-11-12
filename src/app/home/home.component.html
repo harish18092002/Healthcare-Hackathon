@@ -1,0 +1,31 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+  rel="stylesheet"
+/>
+<body class="body">
+  <header>
+    <div class="headimg">
+      <img style="height: 45px" src="../../assets/long.svg" alt="" />
+    </div>
+    <div></div>
+  </header>
+  <div class="container">
+    <div class="fonts">
+      <span id="collect">Connect </span>
+      <span id="ur">To</span>
+      <br />
+      <span id="on">Your</span>
+      <br />
+      <span id="net">Patients</span>
+    </div>
+    <div class="login">
+      <button (click)="showelements = !showelements" id="now">Login</button>
+      <div class="headbtn" *ngIf="showelements">
+        <button class="dr" (click)="gotodoctor()">Doctor</button>
+        <button class="nr" (click)="gotonurse()">Nurse</button>
+      </div>
+    </div>
+  </div>
+</body>
